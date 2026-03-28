@@ -1,0 +1,28 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal portfolio page for a software developer",
+  "scripts": {
+    "lint": "eslint script.js",
+    "test": "node -e \"var fs=require('fs');var h=fs.readFileSync('index.html','utf8');var ids=['site-shell','primary-nav','hero-section','feature-grid','primary-cta','mobile-nav-toggle','interactive-demo','footer-section'];var ok=true;ids.forEach(function(id){var found=h.indexOf('id=\\\"'+id+'\\\"')!==-1;console.log((found?'PASS':'FAIL')+': #'+id);if(!found)ok=false;});if(!ok){console.error('\\nDOM target validation failed');process.exit(1);}console.log('\\nAll '+ids.length+'/'+ids.length+' DOM targets verified.');\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "script"
+    },
+    "rules": {
+      "no-undef": "error",
+      "no-unused-vars": "warn",
+      "no-console": "off"
+    }
+  }
+}

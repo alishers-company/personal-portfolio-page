@@ -3,111 +3,799 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal portfolio page</title>
     <meta
-      id="meta-description"
       name="description"
-      content="personal portfolio page"
+      content="Alex Chen — Full Stack Engineer specializing in scalable web applications, REST APIs, and developer tooling. Available for senior engineering roles and consulting."
+    />
+    <meta property="og:title" content="Alex Chen — Full Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Building scalable systems and elegant interfaces. 5+ years shipping production software."
+    />
+    <meta property="og:type" content="website" />
+    <title>Alex Chen — Full Stack Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body data-starter="landing">
-    <div class="app-shell" data-testid="site-shell">
-      <header class="app-header">
-        <div class="header-brand">
-          <div class="brand-mark">p</div>
-          <span class="brand-name">personal portfolio page</span>
-        </div>
-        <nav class="header-nav" data-testid="primary-nav"><a href="#home" class="nav-link">Home</a></nav>
-        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
-      </header>
+  <body id="site-shell">
+    <!-- Navigation -->
+    <nav id="primary-nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="#hero-section" class="nav-brand" aria-label="Alex Chen — Home">
+          <span class="brand-bracket">{</span
+          ><span class="brand-text">alex.chen</span
+          ><span class="brand-bracket">}</span>
+        </a>
+        <button
+          id="mobile-nav-toggle"
+          class="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu" role="list">
+          <li><a href="#hero-section" class="nav-link">Home</a></li>
+          <li><a href="#feature-grid" class="nav-link">Projects</a></li>
+          <li><a href="#who-its-for" class="nav-link">About</a></li>
+          <li><a href="#interactive-demo" class="nav-link">Skills</a></li>
+          <li>
+            <a href="#primary-cta" class="nav-link nav-cta">Hire Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-      <main>
-        <section class="hero-section" id="home" data-testid="hero-section">
-          <div class="hero-content">
-            <div class="hero-badge">Product</div>
-            <h1 class="hero-title" id="page-title">personal portfolio page</h1>
-            <p class="hero-subtitle">personal portfolio page</p>
-            <div class="hero-actions">
-              <a class="btn-primary" href="#features" data-testid="primary-cta">Get Started</a>
-              <button class="btn-secondary" type="button" data-testid="interactive-demo">See Demo</button>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-app-preview">
-              <div class="hero-app-bar"><span></span><span></span><span></span></div>
-              <div class="hero-app-body">
-                <div class="hero-app-sidebar">
-                  <div class="hero-nav-item">Home</div>
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero-section"
+        data-testid="hero-section"
+        aria-label="Introduction"
+      >
+        <div class="container">
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="avail-badge">
+                <span class="avail-dot"></span> Available for new opportunities
+              </div>
+              <h1 class="hero-title">
+                I build software<br />that
+                <span class="accent-text">scales</span> and
+                <span class="accent-text">ships</span>.
+              </h1>
+              <p class="hero-desc">
+                Full Stack Engineer with 5+ years crafting high-performance web
+                applications, RESTful APIs, and developer tooling. I turn
+                complex engineering problems into clean, maintainable systems —
+                from prototype to production.
+              </p>
+              <div class="hero-stack" aria-label="Core technologies">
+                <span class="stack-pill">TypeScript</span>
+                <span class="stack-pill">React</span>
+                <span class="stack-pill">Node.js</span>
+                <span class="stack-pill">Go</span>
+                <span class="stack-pill">PostgreSQL</span>
+                <span class="stack-pill">Docker</span>
+              </div>
+              <div class="hero-actions">
+                <a
+                  href="#primary-cta"
+                  class="btn btn-primary"
+                  id="hero-cta-btn"
+                >
+                  Let's work together
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a href="#feature-grid" class="btn btn-ghost">View my work</a>
+              </div>
+              <div class="hero-stats" aria-label="Career highlights">
+                <div class="stat-item">
+                  <span class="stat-num">50+</span>
+                  <span class="stat-label">Projects shipped</span>
                 </div>
-                <div class="hero-app-content">
-                  <div class="wire-block-lg"></div>
-                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                  <span class="stat-num">5 yrs</span>
+                  <span class="stat-label">Experience</span>
+                </div>
+                <div class="stat-divider" aria-hidden="true"></div>
+                <div class="stat-item">
+                  <span class="stat-num">12k+</span>
+                  <span class="stat-label">GitHub stars</span>
                 </div>
               </div>
             </div>
+            <div class="hero-visual" aria-hidden="true">
+              <div class="terminal-card">
+                <div class="terminal-bar">
+                  <span class="t-dot t-red"></span>
+                  <span class="t-dot t-yellow"></span>
+                  <span class="t-dot t-green"></span>
+                  <span class="t-title">~/portfolio — zsh</span>
+                </div>
+                <div class="terminal-body" id="terminal-output"></div>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="social-proof" id="audience">
-          <span class="audience-label">Built for</span>
-          <span class="audience-tag">software developers</span><span class="audience-tag">engineers</span><span class="audience-tag">coders</span>
-        </section>
+      <!-- Projects / Feature Grid -->
+      <section id="feature-grid" aria-label="Selected projects">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-eyebrow">Selected work</span>
+            <h2 class="section-title">Projects that made an impact</h2>
+            <p class="section-desc">
+              Production systems, open source contributions, and tools built to
+              solve real engineering problems.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <!-- Project 1 — Featured -->
+            <article class="project-card project-featured">
+              <div class="project-img">
+                <div class="project-img-bg proj-purple" aria-hidden="true">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <rect
+                      width="52"
+                      height="52"
+                      rx="14"
+                      fill="rgba(124,111,255,0.18)"
+                    />
+                    <path
+                      d="M26 12c-6.627 0-12 5.373-12 12 0 .382.019.76.056 1.131C11.155 26.087 9 28.485 9 31.5c0 3.59 2.91 6.5 6.5 6.5h21c3.59 0 6.5-2.91 6.5-6.5 0-3.318-2.499-6.07-5.765-6.445A12 12 0 0026 12z"
+                      fill="rgba(124,111,255,0.35)"
+                      stroke="#7c6fff"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-type">API / Backend</span>
+                  <span class="project-badge badge-live">&#9679; Live</span>
+                </div>
+                <h3 class="project-name">CloudSync API</h3>
+                <p class="project-desc">
+                  High-throughput REST API handling 2M+ daily file sync
+                  operations. Built with Go and PostgreSQL, serving a
+                  multi-tenant SaaS platform with a 99.9% uptime SLA.
+                </p>
+                <ul class="project-wins">
+                  <li>Processes 2M+ sync events per day</li>
+                  <li>Sub-50ms p99 latency under full load</li>
+                  <li>Zero-downtime deploys via blue-green</li>
+                </ul>
+                <div class="project-tech-list">
+                  <span class="tech">Go</span>
+                  <span class="tech">PostgreSQL</span>
+                  <span class="tech">Redis</span>
+                  <span class="tech">Docker</span>
+                  <span class="tech">AWS</span>
+                </div>
+                <div class="project-links-row">
+                  <a
+                    href="#"
+                    class="proj-link proj-link-main"
+                    aria-label="View CloudSync API case study"
+                    >Case study &#8594;</a
+                  >
+                  <a
+                    href="#"
+                    class="proj-link"
+                    aria-label="View CloudSync API source on GitHub"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
 
-        
-        <section class="problem-section" id="problem">
-          <div class="section-label">The Problem</div>
-          <h2 class="problem-text">Making it easy to share their accomplishments with others</h2>
-        </section>
+            <!-- Project 2 -->
+            <article class="project-card">
+              <div class="project-img">
+                <div class="project-img-bg proj-teal" aria-hidden="true">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <rect
+                      width="52"
+                      height="52"
+                      rx="14"
+                      fill="rgba(0,212,170,0.15)"
+                    />
+                    <rect
+                      x="9"
+                      y="24"
+                      width="9"
+                      height="22"
+                      rx="3"
+                      fill="rgba(0,212,170,0.4)"
+                      stroke="#00d4aa"
+                      stroke-width="1.5"
+                    />
+                    <rect
+                      x="22"
+                      y="17"
+                      width="9"
+                      height="29"
+                      rx="3"
+                      fill="rgba(0,212,170,0.4)"
+                      stroke="#00d4aa"
+                      stroke-width="1.5"
+                    />
+                    <rect
+                      x="35"
+                      y="9"
+                      width="9"
+                      height="37"
+                      rx="3"
+                      fill="rgba(0,212,170,0.4)"
+                      stroke="#00d4aa"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-type">Full Stack / React</span>
+                  <span class="project-badge badge-live">&#9679; Live</span>
+                </div>
+                <h3 class="project-name">DevBoard</h3>
+                <p class="project-desc">
+                  Real-time developer productivity dashboard aggregating GitHub,
+                  Jira, and CI/CD metrics. Adopted by 200+ engineering teams to
+                  surface bottlenecks and improve delivery flow.
+                </p>
+                <div class="project-tech-list">
+                  <span class="tech">React</span>
+                  <span class="tech">TypeScript</span>
+                  <span class="tech">Node.js</span>
+                  <span class="tech">GraphQL</span>
+                  <span class="tech">WebSockets</span>
+                </div>
+                <div class="project-links-row">
+                  <a
+                    href="#"
+                    class="proj-link proj-link-main"
+                    aria-label="View DevBoard live demo"
+                    >Live demo &#8594;</a
+                  >
+                  <a
+                    href="#"
+                    class="proj-link"
+                    aria-label="View DevBoard source on GitHub"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
 
-        <section class="features-section" id="features" data-testid="feature-grid">
-          <div class="section-header"><div class="section-label">Features</div><h2 class="section-title">Everything you need</h2></div>
-          <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">&#10024;</span>
-        <h3>a section to display 3-5 projects with images and descriptions</h3>
-        <p class="feature-desc">Designed for software developers.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">&#9889;</span>
-        <h3>Responsive layout</h3>
-        <p class="feature-desc">Designed for engineers.</p>
-      </div></div>
-        </section>
+            <!-- Project 3 -->
+            <article class="project-card">
+              <div class="project-img">
+                <div class="project-img-bg proj-gold" aria-hidden="true">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <rect
+                      width="52"
+                      height="52"
+                      rx="14"
+                      fill="rgba(251,191,36,0.15)"
+                    />
+                    <path
+                      d="M11 15h30M11 24h22M11 33h26"
+                      stroke="#fbbf24"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                    />
+                    <circle
+                      cx="41"
+                      cy="37"
+                      r="7"
+                      fill="rgba(251,191,36,0.25)"
+                      stroke="#fbbf24"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M39 37l1.5 1.5L43 35"
+                      stroke="#fbbf24"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-type">Open Source / CLI</span>
+                  <span class="project-badge badge-oss">&#9733; 4.2k</span>
+                </div>
+                <h3 class="project-name">review-gpt</h3>
+                <p class="project-desc">
+                  CLI tool that plugs AI-powered code review into Git workflows.
+                  Catches bugs, enforces style guides, and explains complex
+                  diffs — runs as a pre-commit hook or CI step.
+                </p>
+                <div class="project-tech-list">
+                  <span class="tech">TypeScript</span>
+                  <span class="tech">Node.js</span>
+                  <span class="tech">OpenAI API</span>
+                  <span class="tech">GitHub Actions</span>
+                </div>
+                <div class="project-links-row">
+                  <a
+                    href="#"
+                    class="proj-link proj-link-main"
+                    aria-label="View review-gpt on npm"
+                    >npm &#8594;</a
+                  >
+                  <a
+                    href="#"
+                    class="proj-link"
+                    aria-label="View review-gpt source on GitHub"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
 
-        
-        <section class="screens-section" id="screens">
-          <div class="section-header"><div class="section-label">Screens</div><h2 class="section-title">Key Pages</h2></div>
-          <div class="screens-showcase">
-    <div class="screen-card">
-      <div class="screen-preview">
-        <div class="screen-dots"><span></span><span></span><span></span></div>
-        <div class="screen-wireframe">
-          <div class="wire-header"></div>
-          <div class="wire-row"><div class="wire-block-lg"></div><div class="wire-block-sm"></div></div>
-          <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+            <!-- Project 4 -->
+            <article class="project-card">
+              <div class="project-img">
+                <div class="project-img-bg proj-red" aria-hidden="true">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <rect
+                      width="52"
+                      height="52"
+                      rx="14"
+                      fill="rgba(239,68,68,0.15)"
+                    />
+                    <circle
+                      cx="26"
+                      cy="26"
+                      r="11"
+                      fill="none"
+                      stroke="#ef4444"
+                      stroke-width="2"
+                    />
+                    <circle cx="26" cy="26" r="4" fill="rgba(239,68,68,0.5)" />
+                    <path
+                      d="M26 10v5M26 37v5M10 26h5M37 26h5"
+                      stroke="#ef4444"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-type">Library / Open Source</span>
+                  <span class="project-badge badge-oss">&#9733; 7.8k</span>
+                </div>
+                <h3 class="project-name">openmetrics-js</h3>
+                <p class="project-desc">
+                  Lightweight observability library for Node.js. Drop-in
+                  Prometheus-compatible metrics with zero dependencies — 1KB
+                  gzipped and 3M+ weekly npm downloads.
+                </p>
+                <div class="project-tech-list">
+                  <span class="tech">JavaScript</span>
+                  <span class="tech">Prometheus</span>
+                  <span class="tech">npm</span>
+                  <span class="tech">Jest</span>
+                </div>
+                <div class="project-links-row">
+                  <a
+                    href="#"
+                    class="proj-link proj-link-main"
+                    aria-label="View openmetrics-js documentation"
+                    >Docs &#8594;</a
+                  >
+                  <a
+                    href="#"
+                    class="proj-link"
+                    aria-label="View openmetrics-js source on GitHub"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who It's For -->
+      <section id="who-its-for" aria-label="Ideal clients and collaborators">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-eyebrow">Who I work with</span>
+            <h2 class="section-title">Built for teams that ship</h2>
+            <p class="section-desc">
+              I do my best work alongside ambitious engineers and product teams
+              building systems that matter.
+            </p>
+          </div>
+          <div class="audience-grid">
+            <div class="audience-card">
+              <div class="audience-icon aud-purple" aria-hidden="true">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M11 3l7 8H4l7-8z"
+                    fill="rgba(124,111,255,0.5)"
+                    stroke="#7c6fff"
+                    stroke-width="1.3"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4 19h14"
+                    stroke="#7c6fff"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="audience-title">Startups scaling fast</h3>
+              <p class="audience-desc">
+                Seed to Series B teams that need senior engineering firepower
+                without the hiring overhead. I embed quickly, raise the code
+                quality bar, and ship features that move key metrics.
+              </p>
+            </div>
+            <div class="audience-card">
+              <div class="audience-icon aud-teal" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <rect
+                    x="3"
+                    y="6"
+                    width="16"
+                    height="12"
+                    rx="2.5"
+                    fill="none"
+                    stroke="#00d4aa"
+                    stroke-width="1.3"
+                  />
+                  <path d="M3 10h16" stroke="#00d4aa" stroke-width="1.3" />
+                  <path
+                    d="M8 14h6"
+                    stroke="#00d4aa"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="audience-title">Platform engineering teams</h3>
+              <p class="audience-desc">
+                Infrastructure and product engineering teams where I contribute
+                from day one. Full-stack depth means I don't create bottlenecks
+                at the frontend/backend boundary.
+              </p>
+            </div>
+            <div class="audience-card">
+              <div class="audience-icon aud-gold" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle
+                    cx="11"
+                    cy="8"
+                    r="4"
+                    fill="none"
+                    stroke="#fbbf24"
+                    stroke-width="1.3"
+                  />
+                  <path
+                    d="M4 19c0-3.866 3.134-7 7-7s7 3.134 7 7"
+                    stroke="#fbbf24"
+                    stroke-width="1.3"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="audience-title">Founders building 0&#8594;1</h3>
+              <p class="audience-desc">
+                Technical co-founders and solo founders who need a trusted
+                engineer to turn ideas into working products. I think in
+                products as much as in systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Demo / Skills -->
+      <section id="interactive-demo" aria-label="Code examples">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-eyebrow">In practice</span>
+            <h2 class="section-title">Code I'm proud of</h2>
+            <p class="section-desc">
+              Clean, well-structured code teams can maintain and extend. Click
+              the tabs to see different examples.
+            </p>
+          </div>
+          <div class="demo-wrapper">
+            <div class="demo-tabs" role="tablist" aria-label="Code examples">
+              <button
+                class="demo-tab active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-api"
+                id="tab-api"
+                data-tab="api"
+              >
+                API Handler
+              </button>
+              <button
+                class="demo-tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-hook"
+                id="tab-hook"
+                data-tab="hook"
+              >
+                React Hook
+              </button>
+              <button
+                class="demo-tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-test"
+                id="tab-test"
+                data-tab="test"
+              >
+                Unit Test
+              </button>
+            </div>
+            <div class="demo-code-wrap">
+              <div
+                class="code-panel active"
+                id="panel-api"
+                role="tabpanel"
+                aria-labelledby="tab-api"
+              >
+                <pre
+                  class="code-pre"
+                ><code><span class="kw">async function</span> <span class="fn">handleFileSync</span>(req, res) {
+  <span class="kw">const</span> { userId, fileId } = req.params;
+
+  <span class="cm">// Authorize and fetch in one query — no extra round trip</span>
+  <span class="kw">const</span> file = <span class="kw">await</span> db.files.findFirst({
+    where: { id: fileId, ownerId: userId },
+    select: { id: <span class="bl">true</span>, checksum: <span class="bl">true</span>, size: <span class="bl">true</span> }
+  });
+
+  <span class="kw">if</span> (!file) <span class="kw">return</span> res.status(<span class="nm">404</span>).json({ error: <span class="st">"File not found"</span> });
+
+  <span class="kw">const</span> job = <span class="kw">await</span> queue.add(<span class="st">"file-sync"</span>, {
+    fileId:   file.id,
+    checksum: file.checksum,
+    priority: file.size &lt; <span class="nm">1_000_000</span> ? <span class="st">"high"</span> : <span class="st">"normal"</span>
+  });
+
+  <span class="kw">return</span> res.status(<span class="nm">202</span>).json({ jobId: job.id, status: <span class="st">"queued"</span> });
+}</code></pre>
+              </div>
+              <div
+                class="code-panel"
+                id="panel-hook"
+                role="tabpanel"
+                aria-labelledby="tab-hook"
+                hidden
+              >
+                <pre
+                  class="code-pre"
+                ><code><span class="kw">function</span> <span class="fn">useRealTimeMetrics</span>(projectId) {
+  <span class="kw">const</span> [metrics, setMetrics] = useState(<span class="bl">null</span>);
+  <span class="kw">const</span> [error,   setError]   = useState(<span class="bl">null</span>);
+
+  useEffect(() =&gt; {
+    <span class="kw">const</span> ws = <span class="kw">new</span> WebSocket(
+      <span class="st">`wss://api.devboard.io/metrics/<span class="tp">${projectId}</span>`</span>
+    );
+
+    ws.onmessage = (e) =&gt; {
+      <span class="kw">const</span> update = JSON.parse(e.data);
+      setMetrics(prev =&gt; ({ ...prev, ...update }));
+    };
+
+    ws.onerror = () =&gt; setError(<span class="kw">new</span> Error(<span class="st">"Connection lost"</span>));
+
+    <span class="kw">return</span> () =&gt; ws.close(); <span class="cm">// always clean up</span>
+  }, [projectId]);
+
+  <span class="kw">return</span> { metrics, error, isLoading: !metrics &amp;&amp; !error };
+}</code></pre>
+              </div>
+              <div
+                class="code-panel"
+                id="panel-test"
+                role="tabpanel"
+                aria-labelledby="tab-test"
+                hidden
+              >
+                <pre
+                  class="code-pre"
+                ><code>describe(<span class="st">"handleFileSync"</span>, () =&gt; {
+  <span class="kw">const</span> mockFile = { id: <span class="st">"f-1"</span>, checksum: <span class="st">"abc123"</span>, size: <span class="nm">500_000</span> };
+
+  it(<span class="st">"queues a high-priority job for files under 1MB"</span>, <span class="kw">async</span> () =&gt; {
+    db.files.findFirst.mockResolvedValue(mockFile);
+    queue.add.mockResolvedValue({ id: <span class="st">"job-1"</span> });
+
+    <span class="kw">const</span> res = <span class="kw">await</span> request(app)
+      .get(<span class="st">"/files/user-1/f-1/sync"</span>)
+      .expect(<span class="nm">202</span>);
+
+    expect(res.body.jobId).toBe(<span class="st">"job-1"</span>);
+    expect(queue.add).toHaveBeenCalledWith(
+      <span class="st">"file-sync"</span>,
+      expect.objectContaining({ priority: <span class="st">"high"</span> })
+    );
+  });
+
+  it(<span class="st">"returns 404 when file does not belong to user"</span>, <span class="kw">async</span> () =&gt; {
+    db.files.findFirst.mockResolvedValue(<span class="bl">null</span>);
+    <span class="kw">await</span> request(app)
+      .get(<span class="st">"/files/user-1/f-999/sync"</span>)
+      .expect(<span class="nm">404</span>);
+  });
+});</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Primary CTA -->
+      <section id="primary-cta" aria-label="Contact and hire">
+        <div class="container">
+          <div class="cta-card">
+            <div class="cta-avail-badge">
+              <span class="avail-dot avail-dot-green"></span> Available from
+              April 2024
+            </div>
+            <h2 class="cta-title">Ready to build something great?</h2>
+            <p class="cta-desc">
+              Whether you're scaling an existing system, starting from scratch,
+              or need a senior engineer to level up your team — let's talk about
+              what we can build together.
+            </p>
+            <div class="cta-actions">
+              <a
+                href="mailto:alex@example.com"
+                class="btn btn-primary btn-lg"
+                id="cta-email-btn"
+              >
+                Get in touch
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1.5 3L7 7.5 12.5 3M1.5 3h11v8h-11V3z"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="btn btn-outline" aria-label="Download resume PDF"
+                >Download resume</a
+              >
+            </div>
+            <div class="cta-social-links">
+              <a href="#" class="social-btn" aria-label="GitHub profile">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="social-btn" aria-label="LinkedIn profile">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+                LinkedIn
+              </a>
+              <a href="#" class="social-btn" aria-label="Twitter profile">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-section" role="contentinfo">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <a
+              href="#hero-section"
+              class="nav-brand footer-brand-link"
+              aria-label="Back to top"
+            >
+              <span class="brand-bracket">{</span
+              ><span class="brand-text">alex.chen</span
+              ><span class="brand-bracket">}</span>
+            </a>
+            <p class="footer-tagline">Building things that matter.</p>
+          </div>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#hero-section" class="footer-link">Home</a>
+            <a href="#feature-grid" class="footer-link">Projects</a>
+            <a href="#who-its-for" class="footer-link">About</a>
+            <a href="#primary-cta" class="footer-link">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &#169; 2024 Alex Chen. Built with vanilla JS &#8212; no frameworks
+            harmed.
+          </p>
         </div>
       </div>
-      <p class="screen-name">Home</p>
-    </div></div>
-        </section>
+    </footer>
 
-        
-
-        <section class="cta-section" id="primary-cta">
-          <div class="cta-inner">
-            <h2>Ready to build?</h2>
-            <p>clean and simple design with ample whitespace</p>
-            <a class="btn-primary btn-large" href="#home">Get Started Free</a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="app-footer" data-testid="footer-section">
-        <div class="footer-brand"><div class="brand-mark brand-mark-sm">p</div><span class="brand-name">personal portfolio page</span></div>
-        <div class="footer-links"><a href="#home">Home</a></div>
-      </footer>
-    </div>
     <script src="./script.js"></script>
   </body>
 </html>
