@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal portfolio page</title>
+    <meta
+      id="meta-description"
+      name="description"
+      content="personal portfolio page"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-starter="landing">
+    <div class="app-shell" data-testid="site-shell">
+      <header class="app-header">
+        <div class="header-brand">
+          <div class="brand-mark">p</div>
+          <span class="brand-name">personal portfolio page</span>
+        </div>
+        <nav class="header-nav" data-testid="primary-nav"><a href="#home" class="nav-link">Home</a></nav>
+        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+      </header>
+
+      <main>
+        <section class="hero-section" id="home" data-testid="hero-section">
+          <div class="hero-content">
+            <div class="hero-badge">Product</div>
+            <h1 class="hero-title" id="page-title">personal portfolio page</h1>
+            <p class="hero-subtitle">personal portfolio page</p>
+            <div class="hero-actions">
+              <a class="btn-primary" href="#features" data-testid="primary-cta">Get Started</a>
+              <button class="btn-secondary" type="button" data-testid="interactive-demo">See Demo</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-app-preview">
+              <div class="hero-app-bar"><span></span><span></span><span></span></div>
+              <div class="hero-app-body">
+                <div class="hero-app-sidebar">
+                  <div class="hero-nav-item">Home</div>
+                </div>
+                <div class="hero-app-content">
+                  <div class="wire-block-lg"></div>
+                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="social-proof" id="audience">
+          <span class="audience-label">Built for</span>
+          <span class="audience-tag">software developers</span><span class="audience-tag">engineers</span><span class="audience-tag">coders</span>
+        </section>
+
+        
+        <section class="problem-section" id="problem">
+          <div class="section-label">The Problem</div>
+          <h2 class="problem-text">Making it easy to share their accomplishments with others</h2>
+        </section>
+
+        <section class="features-section" id="features" data-testid="feature-grid">
+          <div class="section-header"><div class="section-label">Features</div><h2 class="section-title">Everything you need</h2></div>
+          <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">&#10024;</span>
+        <h3>a section to display 3-5 projects with images and descriptions</h3>
+        <p class="feature-desc">Designed for software developers.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">&#9889;</span>
+        <h3>Responsive layout</h3>
+        <p class="feature-desc">Designed for engineers.</p>
+      </div></div>
+        </section>
+
+        
+        <section class="screens-section" id="screens">
+          <div class="section-header"><div class="section-label">Screens</div><h2 class="section-title">Key Pages</h2></div>
+          <div class="screens-showcase">
+    <div class="screen-card">
+      <div class="screen-preview">
+        <div class="screen-dots"><span></span><span></span><span></span></div>
+        <div class="screen-wireframe">
+          <div class="wire-header"></div>
+          <div class="wire-row"><div class="wire-block-lg"></div><div class="wire-block-sm"></div></div>
+          <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+        </div>
+      </div>
+      <p class="screen-name">Home</p>
+    </div></div>
+        </section>
+
+        
+
+        <section class="cta-section" id="primary-cta">
+          <div class="cta-inner">
+            <h2>Ready to build?</h2>
+            <p>clean and simple design with ample whitespace</p>
+            <a class="btn-primary btn-large" href="#home">Get Started Free</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer" data-testid="footer-section">
+        <div class="footer-brand"><div class="brand-mark brand-mark-sm">p</div><span class="brand-name">personal portfolio page</span></div>
+        <div class="footer-links"><a href="#home">Home</a></div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
